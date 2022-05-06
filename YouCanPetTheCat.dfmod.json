@@ -1,0 +1,13 @@
+{
+    "ModTitle": "You Can Pet The Cat",
+    "ModVersion": "1.0",
+    "ModAuthor": "technitaur",
+    "ContactInfo": "jenifer.irwin@gmail.com",
+    "DFUnity_Version": "0.13.5",
+    "ModDescription": "You can now pet the cat (and other animals)!",
+    "GUID": "bbd3d424-486f-4446-978a-53313fff41e8",
+    "Files": [
+        "Assets/Game/Mods/YouCanPetTheCat/Scripts/YouCanPetTheCat.cs",
+        "Assets/Game/Mods/YouCanPetTheCat.dfmod.json"
+    ]
+}
