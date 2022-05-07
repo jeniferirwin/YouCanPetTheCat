@@ -39,6 +39,7 @@ namespace YouCanPetTheCat
                     animalName = "horse";
                     break;
                 case int n when n < 3:
+                    source.PlayOneShot(DaggerfallWorkshop.SoundClips.EnemyGargoyleBark);
                     animalName = "camel";
                     break;
                 case int n when n < 5:
@@ -56,6 +57,12 @@ namespace YouCanPetTheCat
                 case int n when n < 11:
                     source.PlayOneShot(DaggerfallWorkshop.SoundClips.AnimalDog);
                     animalName = "dog";
+                    break;
+                default:
+                    var chance = Random.Range(0,100);
+                    if (chance < 50) source.PlayOneShot(DaggerfallWorkshop.SoundClips.BirdCall1);
+                    else source.PlayOneShot(DaggerfallWorkshop.SoundClips.BirdCall2);
+                    animalName = "bird";
                     break;
             }
             DaggerfallUI.AddHUDText($"You pet the {animalName}.");
