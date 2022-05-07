@@ -17,7 +17,7 @@ namespace YouCanPetTheCat
             var go = new GameObject(mod.Title);
             instance = go.AddComponent<YouCanPetTheCat>();
             
-            for (int i = 0; i < 11; i++)
+            for (int i = 0; i <= 11; i++)
             {
                 PlayerActivate.RegisterCustomActivation(mod, 201, i, PetAnimal);
             }
