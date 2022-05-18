@@ -2,30 +2,38 @@
 using System.Collections.Generic;
 using DaggerfallWorkshop;
 using DaggerfallWorkshop.Game;
+using DaggerfallWorkshop.Game.Utility.ModSupport;
 using UnityEngine;
 using UnityEditor;
 
 namespace YouCanPetTheCat.Compatibility.Faithful
 {
-    public class ColliderDB : MonoBehaviour
+    public static class ColliderDB
     {
-        public BoxCollider[] colliders;
-        public static ColliderDB instance;
+        public static BoxCollider[] colliders = new BoxCollider[12];
 
-        private void Start()
+        public static void PopulateColliders(Mod mod)
         {
-            instance = this;
+            for (int i = 0; i <= 11; i++)
+            {
+                string path = $"YCPTC_{i}";
+                Debug.Log("[YCPTC] Loading prefab...");
+                GameObject prefab = mod.GetAsset<GameObject>(path);
+                Debug.Log(prefab);
+                Debug.Log("[YCPTC] Loading prefab collider...");
+                BoxCollider collider = prefab.GetComponent<BoxCollider>();
+                colliders[i] = collider;
+            }
         }
 
         public static void Add3DCollider(GameObject obj, int index)
         {
-            Debug.Log($"Index: {index}");
-            if (index < instance.colliders.Length)
+            if (index < colliders.Length)
             {
                 var newCollider = obj.AddComponent<BoxCollider>();
                 newCollider.isTrigger = true;
-                newCollider.center = instance.colliders[index].center;
-                newCollider.size = instance.colliders[index].size;
+                newCollider.center = colliders[index].center;
+                newCollider.size = colliders[index].size;
                 obj.name = $"{obj.name} [Pettable]";
             }
         }

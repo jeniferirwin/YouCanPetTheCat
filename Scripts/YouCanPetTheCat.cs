@@ -13,7 +13,6 @@ namespace YouCanPetTheCat
     {
         public static Mod mod;
         public static YouCanPetTheCat instance;
-        public static ColliderDB colliderDB;
 
         [Invoke(StateManager.StateTypes.Start, 0)]
         public static void Init(InitParams initParams)
@@ -29,7 +28,7 @@ namespace YouCanPetTheCat
 
             mod.IsReady = true;
         }
-        
+
         private static void RegisterActivations()
         {
             for (int i = 0; i <= 11; i++)
@@ -37,18 +36,17 @@ namespace YouCanPetTheCat
                 PlayerActivate.RegisterCustomActivation(mod, 201, i, PetAnimal);
             }
         }
-        
+
         private static void LoadFaithfulColliders(GameObject petParent)
         {
-                GameObject db = Instantiate(Resources.Load("YCPTC_ColliderDB", typeof(GameObject))) as GameObject;
-                StreamingWorld.OnUpdateLocationGameObject += ColliderDB.ApplyColliders;
-                PlayerEnterExit.OnRespawnerComplete += ColliderDB.ApplyColliders;
-                PlayerEnterExit.OnTransitionDungeonInterior += ColliderDB.ApplyColliders;
-                PlayerEnterExit.OnTransitionDungeonExterior += ColliderDB.ApplyColliders;
-                /*
-                PlayerEnterExit.OnTransitionInterior += ColliderDB.ApplyColliders;
-                PlayerEnterExit.OnTransitionExterior += ColliderDB.ApplyColliders;
-                */
+            ColliderDB.PopulateColliders(mod);
+            PlayerEnterExit.OnRespawnerComplete += ColliderDB.ApplyColliders;
+            PlayerEnterExit.OnTransitionDungeonInterior += ColliderDB.ApplyColliders;
+            PlayerEnterExit.OnTransitionDungeonExterior += ColliderDB.ApplyColliders;
+            /*
+            PlayerEnterExit.OnTransitionInterior += ColliderDB.ApplyColliders;
+            PlayerEnterExit.OnTransitionExterior += ColliderDB.ApplyColliders;
+            */
         }
 
         public static void PetAnimal(RaycastHit hit)

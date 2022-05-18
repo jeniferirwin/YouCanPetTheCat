@@ -24,7 +24,6 @@
         "Assets/Game/Mods/YouCanPetTheCat/YouCanPetTheCat.dfmod.json",
         "Assets/Game/Mods/YouCanPetTheCat/Scripts/YouCanPetTheCat.cs",
         "Assets/Game/Mods/YouCanPetTheCat/Resources/YCPTC_11.prefab",
-        "Assets/Game/Mods/YouCanPetTheCat/Resources/YCPTC_ColliderDB.prefab",
         "Assets/Game/Mods/YouCanPetTheCat/Scripts/Compatibility/Faithful/ColliderDB.cs"
     ]
 }
