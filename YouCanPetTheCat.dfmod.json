@@ -1,13 +1,30 @@
 {
     "ModTitle": "YouCanPetTheCat",
-    "ModVersion": "1.2",
+    "ModVersion": "1.3",
     "ModAuthor": "technitaur",
     "ContactInfo": "jenifer.irwin@gmail.com",
     "DFUnity_Version": "0.13.5",
     "ModDescription": "You can now pet the cat (and other animals)!",
     "GUID": "bbd3d424-486f-4446-978a-53313fff41e8",
     "Files": [
+        "Assets/Game/Mods/YouCanPetTheCat/Resources/YCPTC_10.prefab",
+        "Assets/Game/Mods/YouCanPetTheCat/Resources/YCPTC_4.prefab",
+        "Assets/Game/Mods/YouCanPetTheCat/Resources/YCPTC_8.prefab",
+        "Assets/Game/Mods/YouCanPetTheCat/Scripts/AnimalDetails.cs",
+        "Assets/Game/Mods/YouCanPetTheCat/Resources/YCPTC_5.prefab",
+        "Assets/Game/Mods/YouCanPetTheCat/Resources/YCPTC_7.prefab",
+        "Assets/Game/Mods/YouCanPetTheCat/Scripts/Compatibility/Faithful/Pettable.cs",
+        "Assets/Game/Mods/YouCanPetTheCat/Scripts/InfoHelper.cs",
+        "Assets/Game/Mods/YouCanPetTheCat/Resources/YCPTC_0.prefab",
+        "Assets/Game/Mods/YouCanPetTheCat/Resources/YCPTC_6.prefab",
+        "Assets/Game/Mods/YouCanPetTheCat/Resources/YCPTC_3.prefab",
+        "Assets/Game/Mods/YouCanPetTheCat/Resources/YCPTC_1.prefab",
+        "Assets/Game/Mods/YouCanPetTheCat/Resources/YCPTC_2.prefab",
+        "Assets/Game/Mods/YouCanPetTheCat/Resources/YCPTC_9.prefab",
+        "Assets/Game/Mods/YouCanPetTheCat/YouCanPetTheCat.dfmod.json",
         "Assets/Game/Mods/YouCanPetTheCat/Scripts/YouCanPetTheCat.cs",
-        "Assets/Game/Mods/YouCanPetTheCat/YouCanPetTheCat.dfmod.json"
+        "Assets/Game/Mods/YouCanPetTheCat/Resources/YCPTC_11.prefab",
+        "Assets/Game/Mods/YouCanPetTheCat/Resources/YCPTC_ColliderDB.prefab",
+        "Assets/Game/Mods/YouCanPetTheCat/Scripts/Compatibility/Faithful/ColliderDB.cs"
     ]
 }
