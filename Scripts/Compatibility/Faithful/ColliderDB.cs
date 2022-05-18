@@ -1,10 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using DaggerfallWorkshop;
+﻿using System.Collections.Generic;
 using DaggerfallWorkshop.Game;
 using DaggerfallWorkshop.Game.Utility.ModSupport;
 using UnityEngine;
-using UnityEditor;
 
 namespace YouCanPetTheCat.Compatibility.Faithful
 {
@@ -17,10 +14,7 @@ namespace YouCanPetTheCat.Compatibility.Faithful
             for (int i = 0; i <= 11; i++)
             {
                 string path = $"YCPTC_{i}";
-                Debug.Log("[YCPTC] Loading prefab...");
                 GameObject prefab = mod.GetAsset<GameObject>(path);
-                Debug.Log(prefab);
-                Debug.Log("[YCPTC] Loading prefab collider...");
                 BoxCollider collider = prefab.GetComponent<BoxCollider>();
                 colliders[i] = collider;
             }
@@ -38,15 +32,8 @@ namespace YouCanPetTheCat.Compatibility.Faithful
             }
         }
 
-        public static void ApplyColliders(GameObject location, bool allowYield)
-        {
-            ApplyColliders();
-        }
-        
-        public static void ApplyColliders(PlayerEnterExit.TransitionEventArgs args)
-        {
-            ApplyColliders();
-        } 
+        public static void ApplyColliders(GameObject location, bool allowYield) => ApplyColliders();
+        public static void ApplyColliders(PlayerEnterExit.TransitionEventArgs args) => ApplyColliders();
         
         public static void ApplyColliders()
         {
