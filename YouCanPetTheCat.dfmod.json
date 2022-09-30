@@ -1,11 +1,11 @@
 {
     "ModTitle": "YouCanPetTheCat",
-    "ModVersion": "1.3-beta",
+    "ModVersion": "1.3.1",
     "ModAuthor": "technitaur",
     "ContactInfo": "jenifer.irwin@gmail.com",
-    "DFUnity_Version": "0.13.5",
+    "DFUnity_Version": "0.14.4",
     "ModDescription": "You can now pet the cat (and other animals)!",
-    "GUID": "bbd3d424-486f-4446-978a-53313fff41e8",
+    "GUID": "07986d81-58d3-4b29-a450-951ff71e3cb8",
     "Files": [
         "Assets/Game/Mods/YouCanPetTheCat/Resources/YCPTC_10.prefab",
         "Assets/Game/Mods/YouCanPetTheCat/Resources/YCPTC_4.prefab",
@@ -25,5 +25,6 @@
         "Assets/Game/Mods/YouCanPetTheCat/Scripts/YouCanPetTheCat.cs",
         "Assets/Game/Mods/YouCanPetTheCat/Resources/YCPTC_11.prefab",
         "Assets/Game/Mods/YouCanPetTheCat/Scripts/Compatibility/Faithful/ColliderDB.cs"
-    ]
+    ],
+    "Dependencies": []
 }

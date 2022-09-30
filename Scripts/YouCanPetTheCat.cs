@@ -24,7 +24,7 @@ namespace YouCanPetTheCat
             mod = initParams.Mod;
             var go = new GameObject(mod.Title);
             instance = go.AddComponent<YouCanPetTheCat>();
-            var faithful = ModManager.Instance.GetModFromGUID("1424b378-0a50-4bd9-96ae-82162eec9fc4");
+            var faithful = ModManager.Instance.GetModFromGUID("4a77060d-d118-4f35-9b81-3ff09fc8dc9c");
             if (faithful == null)
                 RegisterActivations();
             else
